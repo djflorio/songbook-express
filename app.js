@@ -8,13 +8,16 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var app = express();
+var sb_env = require("./env");
 
-import env from 'process-env';
+var app = express();
 
 // set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://' + USERNAME + ':' + PASSWORD + '@ds139428.mlab.com:39428/sb';
+var mongoDB = 'mongodb://' + sb_env.mongo_user + ':' + sb_env.mongo_pass + '@ds139428.mlab.com:39428/sb';
+
+console.log(mongoDB);
+
 mongoose.connect(mongoDB, function(err) {
   if (err) throw err;
   console.log("succesfully connected to MongoDB");
