@@ -1,0 +1,28 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.paper {
+    background-color: #fafafa;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+.song-section {
+    padding: 10px;
+}
+
+.wordblock {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.wordblock__chord,
+.wordblock__word {
+    display: block;
+}
