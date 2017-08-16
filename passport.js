@@ -54,6 +54,13 @@ module.exports = function(passport) {
                         }
                         callback(null, match);
                     });
+                },
+                matchPasswords: function(callback) {
+                    var match = false;
+                    if (req.param('password') == req.param('password2')) {
+                        match = true;
+                    }
+                    callback(null, match);
                 }
             },
             function(err, results) {
@@ -63,6 +70,9 @@ module.exports = function(passport) {
                 }
                 if (results.matchUsername) {
                     message.push("An account with that username already exists");
+                }
+                if (!results.matchPasswords){
+                    message.push("Passwords do not match");
                 }
                 if (message.length > 0) {
                     return done(null, false, req.flash('signupMessage', message));
