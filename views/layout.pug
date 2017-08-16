@@ -2,8 +2,15 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Delius')
     link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .header.theme-background
+      a.header__logo(href="/") Songbook
+      span.header__user-info login
+
+    .padded-content
+      block content
+
     script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
     script(type='text/javascript', src='/javascripts/songapp.js')
-  body
-    block content

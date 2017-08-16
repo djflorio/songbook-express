@@ -2,19 +2,6 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var ChunkSchema = new Schema({
-    chord: String,
-    word: String
-});
-
-var LineSchema = new Schema({
-    chunks: [ChunkSchema]
-});
-
-var SectionSchema = new Schema({
-    lines: [LineSchema]
-});
-
 var SongSchema = new Schema({
     title: {type: String, required: true, max: 250},
     artist: {type: String, required: true, max: 150},

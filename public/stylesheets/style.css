@@ -1,10 +1,61 @@
+/*****************************
+GENERAL
+*****************************/
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-  color: #00B7FF;
+    text-decoration: none;
 }
+
+.theme-background {
+    background-color: #98BCCB;
+}
+
+.padded-content {
+    padding: 20px;
+}
+
+
+/*****************************
+HEADER
+*****************************/
+
+.header {
+    position: relative;
+    height: 40px;
+}
+
+.header__logo {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-family: 'Delius', cursive;
+    font-size: 22px;
+    cursor: pointer;
+    color: black;
+}
+
+.header__user-info {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.header__logo:hover,
+.header__user-info:hover {
+    color: #efefef;
+}
+
+
+
+
+
 
 .paper {
     background-color: #fafafa;

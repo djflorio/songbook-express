@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  if messages
+    each message in messages
+      .notification= message
+  
+  form(action="/signup", method="post")
+    .form-divider
+      label Email
+      input(type="text", name="email")
+    .form-divider
+      label Username
+      input(type="text", name="username")
+    .form-divider
+      label Password
+      input(type="password", name="password")
+    button(type="submit") Signup
+  
+  a(href="/login") login

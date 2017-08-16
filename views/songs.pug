@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  ul
+  each song in song_list
+    li
+      p= song.title
+      p= song.id
+  else
+    li There are no songs.
