@@ -2,3 +2,9 @@ extends layout
 
 block content
   h1 You made it!
+  a(href="/logout") Logout
+  ul
+    li id: #{user._id}
+    li email: #{user.email}
+    li password: #{user.password}
+    
